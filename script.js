@@ -1,43 +1,44 @@
-const array = ["Rock", "Paper", "Scissors"];
+const array = ["rock", "paper", "scissors"];
 const computerSelection = array[Math.floor(Math.random() * array.length)];
 
-const playerSelection = prompt("Rock, paper, scissors");
+var playerSelection = prompt("Rock, paper, scissors");
+var playerSelection = playerSelection.toLowerCase()
 
 function game() {
-  if (playerSelection === "Rock" && computerSelection === "Rock") {
+  if (playerSelection === "rock" && computerSelection === "rock") {
     console.log(`You both choise ${playerSelection} Result: Tie`);
-  } else if (playerSelection === "Paper" && computerSelection === "Paper") {
+  } else if (playerSelection === "paper" && computerSelection === "paper") {
     console.log(
       `You choise ${playerSelection} and PCU choise ${computerSelection} Result: Tie`
     );
   } else if (
-    playerSelection === "Scissors" &&
-    computerSelection === "Scissors"
+    playerSelection === "scissors" &&
+    computerSelection === "scissors"
   ) {
     console.log(
       `You choise ${playerSelection} and PCU choise ${computerSelection} Result: Tie`
     );
-  } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+  } else if (playerSelection === "rock" && computerSelection === "paper") {
     console.log(
       `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You WIN`
     );
-  } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+  } else if (playerSelection === "rock" && computerSelection === "scissors") {
     console.log(
       `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You WIN`
     );
-  } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+  } else if (playerSelection === "paper" && computerSelection === "rock") {
     console.log(
       `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You WIN`
     );
-  } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+  } else if (playerSelection === "scissors" && computerSelection === "paper") {
     console.log(
       `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You WIN`
     );
-  } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+  } else if (playerSelection === "paper" && computerSelection === "scissors") {
     console.log(
       `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You LOOSE`
     );
-  } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+  } else if (playerSelection === "scissors" && computerSelection === "rock") {
     console.log(
       `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You LOOSE`
     );
