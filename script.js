@@ -1,10 +1,12 @@
 const array = ["rock", "paper", "scissors"];
-const computerSelection = array[Math.floor(Math.random() * array.length)];
 
-var playerSelection = prompt("Rock, paper, scissors");
+
+
+function playRound() {
+  var computerSelection = array[Math.floor(Math.random() * array.length)];
+
+  var playerSelection = prompt("Rock, paper, scissors");
 var playerSelection = playerSelection.toLowerCase()
-
-function game() {
   if (playerSelection === "rock" && computerSelection === "rock") {
     console.log(`You both choise ${playerSelection} Result: Tie`);
   } else if (playerSelection === "paper" && computerSelection === "paper") {
@@ -44,15 +46,11 @@ function game() {
     );
   } else console.log("Error");
 }
-// function playRound(playerSelection, computerSelection) {
 
-//   return (`Player choise: ${playerSelection} ` + `PCU chose: ${computerSelection}`)
-// }
 
-// function game() {
-//     for (let i = 1; i <= 5; i++) {
-//       if ()
-//       }
-// }
+function game() {
+    for (let i = 1; i <= 5; i++) {
+      playRound(i)
+}}
 
 console.log(game());
