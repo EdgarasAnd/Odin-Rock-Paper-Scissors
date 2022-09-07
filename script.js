@@ -1,4 +1,9 @@
 const array = ["rock", "paper", "scissors"];
+const btnRock = document.getElementById('rock')
+const btnPaper = document.getElementById('paper')
+const btnScissors = document.getElementById('scissors')
+// btnRock.addEventListener('click', console.log('rock'))
+
 
 function playRound() {
   var computerSelection = array[Math.floor(Math.random() * array.length)];
