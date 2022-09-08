@@ -1,8 +1,29 @@
+
+// const wrapper = document.getElementById('wrapper');
+
+// wrapper.addEventListener('click', (event) => {
+//   const isButton = event.target.nodeName === 'BUTTON';
+  
+//     return console.dir(event.target.id);
+//   }
+
+  
+// )
+
 const array = ["rock", "paper", "scissors"];
 const btnRock = document.getElementById('rock')
 const btnPaper = document.getElementById('paper')
 const btnScissors = document.getElementById('scissors')
 // btnRock.addEventListener('click', console.log('rock'))
+let btns = document.querySelectorAll('button');
+
+for (i of btns) {
+  (function(i) {
+    i.addEventListener('click', function() {
+      document.querySelector('.msg').innerHTML = i.innerHTML;
+    });
+  })(i);
+}
 
 
 function playRound() {
@@ -26,7 +47,7 @@ function playRound() {
     result = 'Loose'
     console.log(result);  
     // console.log(
-    //   `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You WIN`
+      //   `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You WIN`
     // );
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
     result = 'Win'
@@ -38,10 +59,10 @@ function playRound() {
     result = 'Win'
     console.log(result);  
     // console.log(
-    //   `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You WIN`
-    // );
-  } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    result = 'Win'
+      //   `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You WIN`
+      // );
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+      result = 'Win'
     console.log(result);  
     // console.log(
     //   `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You WIN`
@@ -50,12 +71,12 @@ function playRound() {
     result = 'Loose'
     console.log(result);  
     // console.log(
-    //   `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You LOOSE`
-    // );
-  } else if (playerSelection === "scissors" && computerSelection === "rock") {
-    result = 'Loose'
-    console.log(result);  
-    // console.log(
+      //   `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You LOOSE`
+      // );
+    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+      result = 'Loose'
+      console.log(result);  
+      // console.log(
     //   `You choise ${playerSelection} and PCU choise ${computerSelection} Result: You LOOSE`
     // );
   } else console.log("Error");
@@ -75,7 +96,7 @@ function game() {
 // function finalResult(){
 //   var playerCount = 0
 //   for (let i = 0; i + game(i); i++) {
-//     playerCount
+  //     playerCount
 //   }
 // }
 console.log(game());
