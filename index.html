@@ -1,61 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js"></script>    
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <title>Odin Project: Rock Paper Scissors</title>    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="script.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous" />
+    <title>Odin Project: Rock Paper Scissors</title>
   </head>
   <body>
     <main class="container">
-        <div class="row">
-            <h1 class="title text-center">Odin Project: Rock Paper Scissors</h1>
-            <div class="wrapper col d-flex m-auto">                
-                <button class="btn btn-primary m-1 w-100" id="rock">Rock</button>
-                <button class="btn btn-primary m-1 w-100" id="paper">Paper</button>
-                <button class="btn btn-primary m-1 w-100" id="scissors">Scissors</button>
-            </div>
-            <table class="table text-center">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">You</th>
-                    <th scope="col">JS AI</th>                    
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td class="msg">Mark</td>
-                    <td>Otto</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Thornton</td>
-                    <td>Thornton</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Thornton</td>
-                    <td>Thornton</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Thornton</td>
-                    <td>Thornton</td>
-                  </tr>
-                </tbody>
-              </table>
+      <div class="row">
+        <h1 class="title text-center">Odin Project: Rock Paper Scissors</h1>
+        <div class="wrapper col d-flex m-auto">
+          <button class="btn btn-primary m-1 w-100" id="rock">Rock</button>
+          <button class="btn btn-primary m-1 w-100" id="paper">Paper</button>
+          <button class="btn btn-primary m-1 w-100" id="scissors">
+            Scissors
+          </button>
         </div>
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th scope="col">You</th>
+              <th scope="col">JS AI</th>
+            </tr>
+          </thead>
+          <tbody id="result">            
+          </tbody>
+        </table>
+        <div class="final-result row text-center"></div>
+      </div>
     </main>
-    
-</body>
+  </body>
 </html>
