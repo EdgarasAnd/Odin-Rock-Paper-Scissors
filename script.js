@@ -2,15 +2,16 @@ const array = ["rock", "paper", "scissors"];
 // const btnRock = document.getElementById('rock')
 // const btnPaper = document.getElementById('paper')
 // const btnScissors = document.getElementById('scissors')
-var btn = document.querySelectorAll('button');
-    
-// function getButtonId(i) {
-//   let buttonId = i.target.id;
-//   console.log(buttonId);
-// } 
+// let btns = document.querySelectorAll('button');
 
-
-
+// btns.forEach((btns) => {
+//   btns.addEventListener('click', () => {
+//     const choiceSelection = btns.id.selection;
+//     const choose = theChoice.find((choose) => choose.name === choiceSelection);
+//     select(choose);
+//   })
+// });
+// console.log()
 
 // for (i of btns) {
 //   (function(i) {
@@ -22,12 +23,16 @@ var btn = document.querySelectorAll('button');
 const resultHtml = document.querySelector('tbody')
 const finalResultHtml = document.querySelector('.final-result')
 
-
-
-
+var youWonRound = `You won this round`;
+var computerWonRound = "Comp. won this round";
+var tie = "Tie";
+var error = 'error'
+var roundResult = 0;
+var playerScore = 0;
+var computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection == computerSelection) {
+  if (playerSelection === computerSelection) {
     return tie;
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
     return youWonRound;
@@ -44,44 +49,27 @@ function playRound(playerSelection, computerSelection) {
   } else return (error)
 }
 
-var roundResult = 0;
-var playerScore = 0;
-var computerScore = 0;
-var computerWonRound = `You won this round`;
-var youWonRound = "Comp. won this round";
-var tie = "Tie";
-var error = 'error';
 
-btn.forEach((button) => {
-  button.addEventListener('click', (i) => {
-    const playerSelection = i.target.id;
-  console.log(playerSelection);
 
-  const computerSelection = array[Math.floor(Math.random() * array.length)];
-  // for (let i = 1; i <= 1; i++) {
-    
-    // const playerSelection = prompt("Rock, paper, scissors").toLowerCase();
+
+for (let i = 1; i <= 5; i++) {
+  var computerSelection = array[Math.floor(Math.random() * array.length)];
+  var playerSelection = prompt("Rock, paper, scissors").toLowerCase();
+  var roundResult = playRound(computerSelection, playerSelection);
+  resultHtml.innerHTML += (`<tr>
+  <td>${playerSelection}</td>
+  <td>${computerSelection}</td>
+</tr>`)
+  console.log(roundResult);
   
-  
-    const roundResult = playRound(computerSelection, playerSelection);
-    resultHtml.innerHTML += (`<tr>
-    <td>${playerSelection}</td>
-    <td>${computerSelection}</td>
-  </tr>`)
-    console.log(roundResult);
-    
-    if (roundResult === computerWonRound) {
-      playerScore++;
-    } else if (roundResult === youWonRound) {
-      computerScore++;
-    } else {
-      tie++;
-    }
-  // }
-  
-  });
-  
-});
+  if (roundResult === youWonRound) {
+    playerScore++;
+  } else if (roundResult === computerWonRound) {
+    computerScore++;
+  } else {
+    tie++;
+  }
+}
 
 
 resultHtml.innerHTML += (`<tr>
@@ -96,7 +84,6 @@ console.log(
     " " +
     computerScore
 );
-
 
 if (playerScore > computerScore) {
   finalResultHtml.innerHTML += (`<h3>You WON</h3>`)
